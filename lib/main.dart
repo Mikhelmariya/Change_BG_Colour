@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 // main()  tells Flutter to run the app defined in MyApp , it is the starting point
@@ -26,6 +28,21 @@ class changeColor extends StatelessWidget {
           ),
         ),
         backgroundColor: Colors.amber[100],
+        body: Center(
+          child: ElevatedButton(
+            onPressed: () {
+              print("Tapped");
+            },
+            child: Text(
+              "Tap me",
+              style: TextStyle(
+                  color: Colors.redAccent, fontWeight: FontWeight.bold),
+            ),
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all<Color>(Colors.black),
+            ),
+          ),
+        ),
       ),
     );
   }
